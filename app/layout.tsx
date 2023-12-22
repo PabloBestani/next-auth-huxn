@@ -4,6 +4,7 @@ import './globals.css'
 import { getServerSession } from 'next-auth';
 import SessionProvider from '@/utils/SessionProvider';
 import NavBar from '@/components/nav-bar';
+import ReactToast from '@/components/react-toast';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -24,6 +25,7 @@ export default async function RootLayout({
         <SessionProvider>
           <NavBar />
           {children}
+          <ReactToast />
         </SessionProvider>
       </body>
     </html>
